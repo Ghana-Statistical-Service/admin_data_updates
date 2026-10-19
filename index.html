@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMDA administrative data dashboard</title>
+<meta name="description" content="Completeness, uniqueness, validity and accuracy of administrative data reported by Ghana's Metropolitan, Municipal and District Assemblies, 2015-2025.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="dash-root">
+<div class="nx" id="nx-root">
+  <aside class="nx-side">
+    <div class="nx-logo"> <img src="./logo.png" height="50" width="50">  
+      <div><b>MMDA</b><span>ADMINISTRATIVE DATA</span>
+      </div>
+    </div>
+    <nav class="nx-nav" id="nx-nav">
+      <button type="button" data-page="overview"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>Dashboard</button>
+      <button type="button" data-page="completeness"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 8 8"/></svg>Completeness</button>
+      <button type="button" data-page="uniqueness"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Uniqueness</button>
+      <button type="button" data-page="validity"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Validity</button>
+      <button type="button" data-page="accuracy"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Accuracy</button>
+      <button type="button" data-page="method"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4"/></svg>Methodology</button>
+    </nav>
+    <div class="nx-filters">
+      <div class="cap">FILTERS</div>
+      <label>Region<select class="nx-region" aria-label="Region"></select></label>
+      <label>District<select class="nx-district" aria-label="District"></select></label>
+      <button class="reset" type="button">Back to national</button>
+    </div>
+    <div class="nx-foot"><span class="nx-foot-n">—</span> records for 2015–2025 from the compiled MMDA administrative dataset. Filters apply to every page.</div>
+  </aside>
+  <div class="nx-main">
+    <div class="nx-bar">
+      <div><div class="nx-crumb" id="nx-crumb"></div><h1 id="nx-title">Dashboard</h1>
+    <p>Data compiled @ 16th of October, 2026</p></div>
+      <div class="nx-tools"><label class="nx-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="nx-q" list="nx-dlist" placeholder="Search districts" aria-label="Search districts" autocomplete="off"><datalist id="nx-dlist"></datalist></label></div>
+    </div>
+    <div class="nx-page" id="nx-page"></div>
+  </div>
+  <div class="nx-tip" id="nx-tip" hidden></div>
+</div>
+
+</div>
+<script src="vendor/d3.min.js"></script>
+<script src="data/data.js"></script>
+<script src="dash-shim.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
